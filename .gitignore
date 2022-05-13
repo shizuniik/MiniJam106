@@ -72,3 +72,7 @@ crashlytics-build.properties
 **/[Aa]ssets/[Ss]treamingAssets/aa/*
 MiniJam106_Game/Assets/TutorialInfo/*
 MiniJam106_Game/Assets/TutorialInfo.meta
+MiniJam106_Game/Assets/Scenes/SampleScene.unity
+MiniJam106_Game/Assets/Scenes/SampleScene.unity.meta
+MiniJam106_Game/Assets/Settings/SampleSceneProfile.asset
+MiniJam106_Game/Assets/Settings/SampleSceneProfile.asset.meta
