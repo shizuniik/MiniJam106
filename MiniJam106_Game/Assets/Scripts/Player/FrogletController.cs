@@ -7,6 +7,7 @@ public class FrogletController : MonoBehaviour
     [SerializeField] float speedV;
     [SerializeField] float speedH;
     [SerializeField] float force;
+    [SerializeField] float forwardForce;
     private int count = 0;
 
     // Start is called before the first frame update
@@ -16,16 +17,25 @@ public class FrogletController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Movement();
+        ForwardMovement();
     }
 
-    void Movement()
+    private void Update()
+    {
+        HorizontalMovement(); 
+        Jump();
+    }
+
+    private void HorizontalMovement()
     {
         transform.Translate(Input.GetAxis("Horizontal") * Vector3.right * Time.deltaTime * speedH);
+    }
 
-        Jump(); 
+    void ForwardMovement()
+    {
+        gameObject.GetComponent<Rigidbody>().AddForce(0, 0, forwardForce * Time.deltaTime); 
     }
 
     private void Jump()
